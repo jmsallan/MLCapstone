@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>report</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Restaurants in the neighbourhoods of Barcelona</h1>
+
+<p>This is the report for the Week 5 assignment of the Applied Data science capstone course.</p>
+
+<h2 id="toc_1">Introduction</h2>
+
+<p>The Foursquare app provides information about venues and users around a specific location. The app allows you to <strong>search</strong> venues of a specific category around a location (specified with longitude and latitude values), and to <strong>explore</strong> the popular or trending spots around a location.</p>
+
+<p>The information provided by the Foursquare app is relevant for entrepreneurs looking for a location to establish her/his business. Place is one of the 4 Ps of the marketing mix (the other being product, price and promotion), and it is absolutely crucial in the restaurant industry.</p>
+
+<p>The aim of my final capstone project is <strong>to find the adequate city neighbourhood to open a restaurant of a specific category, based on restaurants existing in a district</strong>. The idea behind the project is that people will tend to look for restaurants of a specific category in places where they know that there are restaurants of this kind. For instance, if you are looking for a Paella Restaurant in Barcelona, you will go to the Barceloneta neighbourhood, near to the sea and the traditional location of fish and paella restaurants.</p>
+
+<p>My intention is to develop a template to cluster neighbourhoods around types of restaurants with the neighbourhoods of my city, Barcelona. Barcelona has a growing tourist industry, and this analysis can be specially interesting for Barcelonian entrepreneurs looking to open a new restaurant venue. The template can be used for anyone that wants to explore the possibilities of opening a restaurant in a city.</p>
+
+<h2 id="toc_2">Data</h2>
+
+<p>Foursquare app allows to explore the venues around a location, so it is perfect to the aims of this project. But first we need information about <strong>location of Barcelona neighbourhoods</strong>. Specifically, we need a data frame with the name of each neighbourhood, and its latitude and longitude.</p>
+
+<p>Once we have neighbourhood locations, we need a list of <strong>venues of each neighbourhood</strong>, from which we will obtain the <strong>restaurants of each neighbourhood</strong>.</p>
+
+<h2 id="toc_3">Methodology</h2>
+
+<p>The project has three main steps:</p>
+
+<ul>
+<li>Data acquisition</li>
+<li>Data analysis</li>
+<li>Interpretation of analysis results</li>
+</ul>
+
+<p>Interpretation of analysis results is about judgement and knowledge about the analysis outputs. Data acquisition and analysis require specific methodological decisions.</p>
+
+<h3 id="toc_4">Data acquisition</h3>
+
+<p>I have obtained the location of <strong>Barcelona neighbourhoods</strong> scratching <strong>Wikipedia websites</strong> using <strong>Beautiful Soup</strong>. I have proceeded in two steps:</p>
+
+<ul>
+<li>First, I have obtained the links to all Wikipedia pages of Barcelona neighbourhoods through the <a href="https://es.wikipedia.org/wiki/Categor%C3%ADa:Barrios_de_Barcelona">Barcelona neighbourhoods cathegory</a> website. We can find cathegory pages like these for other cities, like <a href="https://es.wikipedia.org/wiki/Categor%C3%ADa:Barrios_de_Madrid">Madrid</a> or <a href="https://en.wikipedia.org/wiki/Category:Arrondissements_of_Paris">Paris</a></li>
+<li>The list of links points of pages <a href="https://es.wikipedia.org/wiki/El_Raval">like this one</a>, that allow obtaining geographical information. </li>
+</ul>
+
+<p>The result of this first step of data acquisition is a data frame containing the <strong>name</strong>, the <strong>longitude</strong> and <strong>latitude</strong> of each neighbourhood. This information can be retrieved from the csv file available <a href="https://github.com/jmsallan/MLCapstone/blob/master/barrisBCN.csv">here</a>.</p>
+
+<p>Once we have the list of neighbourhood locations, we need to retrieve <strong>venues</strong> from each location. The <strong>Foursquare location data</strong> have been obtained making search calls for each neighbourhood, with a <strong>radius</strong> of 1,000 meters and a limit of 400 venues. The 6,026 venues I have obtained this way can be found <a href="https://github.com/jmsallan/MLCapstone/blob/master/llocsBCN.csv">here</a>.</p>
+
+<p>Once obtained the venues list, I have filtered the venues that are restaurants to obtain a <strong>restaurant list</strong>. To do so, I have used regular expressions in the venue categories, to detect restaurant categories. These are the categories containing the string <strong>&#39;Restaurants&#39;</strong>. I have obtained a list of 1,908 restaurants, each with its neighbourhood.</p>
+
+<h3 id="toc_5">Data analysis</h3>
+
+<p>The detection of neighbourhood categories is an unsupervised learning process, as we do not have <em>a priori</em> categories defined for each neighbourhood. I have used <strong>k-means clustering</strong> to clustering neighbourhoods. The input for the clustering algorithm is a matrix with the proportion of each venue from the total present in each neighbourhood.</p>
+
+<p>I have tried with several values of number of clusters <em>k</em>. For values of <em>k</em> above three, we find that the algorithm obtains clusters of one or two items, so I have decided to retain <strong>k=3</strong> clusters. To find common properties of each cluster, I have retained the <strong>10 most common category venues for each neighbourhood</strong>. </p>
+
+<h2 id="toc_6">Results</h2>
+
+<p>The results of the clustering can be summarized in the following map of Barcelona, where neighbourhood locations belonging to a the same cluster are presented with a dot of the same color:</p>
+
+<p><img src="cluster_map.png" alt="mapCluster"></p>
+
+<p>The three clusters found are:</p>
+
+<ul>
+<li><strong>Cluster 1</strong>, in red, including 23 neighbourhoods. In neighbourhoods of this cluster, <strong>Tapas Restaurant</strong> and <strong>Spanish Restaurant</strong> are the most common restaurant categories.</li>
+<li><strong>Cluster 2</strong>, in purple, including five neighbourhoods. The most common restaurant category of this cluster is <strong>Mediterranean Restaurant</strong>.</li>
+<li><strong>Cluster 3</strong>, in light blue, of 46 neighbourhoods. The most common category of this venue are <strong>Spanish Restaurant</strong> and <strong>Restaurant</strong>.</li>
+</ul>
+
+<h2 id="toc_7">Discussion</h2>
+
+<p>The result of the analysis gives non-evident insights about resturant business in Barcelona. Differences across clusters can be interpreted in terms of the use than people makes of restaurants:</p>
+
+<ul>
+<li>Restaurant as leisure place, where locals meet with friends and tourist come for lunch and dinner, and to experience local food.</li>
+<li>Restaurant as convenience place, where locals come by noon on workdays to have lunch.</li>
+</ul>
+
+<p>The most common restaurant category in <strong>cluster 1 (red)</strong> is Tapas Restaurant. Tapas restaurants offer small plates (tapas, in Spanish) of Spanish food (e.g., <em>patatas bravas</em>). Tapas are always enjoyed in a context of leisure, either by tourists (in city centre neighbourhoods) or by locals (in the north neighbourhoods). Tourists can visit northern neighbourhoods (e.g. Horta or Turo de la Peira) for a more authentic tapas experience.</p>
+
+<p>In <strong>cluster 2 (purple)</strong> the most common category is Mediterranean Restaurant. These restaurants offer pizza and pasta, together with some Spanish specialities. These restaurants can be visited either by leisure or at a working pause at noon. These neighbourhoods have also a varied offer of international cuisine restaurants, sometimes owned by immigrant entrepreneurs.</p>
+
+<p><strong>Cluster 3</strong> (light blue) covers more than one half of Barcelona. In those neighbourhoods the predominant restaurant categories are Restaurant or Spanish Restaurant, followed by Mediterranean restaurant. People is going to these restaurants in the working pause. In Spain there is a tradition of making a long work stop (sometimes from 14 to 16) to have a strong lunch, with two plates and dessert. This is offered in Spanish Restaurants and Restaurants, and sometimes in Mediterranean Restaurants as <em>Menu del dia</em>. So we can expect that most of the revenue of these restaurants will be obtained in midday in working days, and that the leisure restaurant market is less buoyant in those neighbourhoods.</p>
+
+<h2 id="toc_8">Conclusion</h2>
+
+<p>The information provided by the clustering of neighbourhoods by restaurant category using information from Foursquare location data gives additional insight to entrepreneurs that aim to open a new restaurant in Barcelona. In particular, we have found that:</p>
+
+<ul>
+<li>People in Barcelona come to neighbourhoods of <strong>cluster 1</strong> to meet with friends (locals) or to enjoy Spanish food (tourist). People wanting to open tapas restaurants may want to explore those places. Revenues of restaurants in cluster 1 are expected to be obtained by night and weeekends.</li>
+<li>In neighbourhoods of <strong>cluster 3</strong> the most common restaurants are spanish restaurants, where people come by noon on workdays to have menu del dia for lunch. Revenues on this cluster will be obtained mainly by noon on working days.</li>
+<li>In neighbourhoods of <strong>cluster 2</strong> we will find Mediterranean restaurants (offering pizza, pasta and local food) and international restaurants. Like cluster 1, people come to these restaurants for leisure.</li>
+</ul>
+
+<p>This analysis offers information about people&#39;s habits of interest for people wanting to start a restaurant business. This information must be complemented with information about real state market: for instance, Tapas bar can be opened more easily in neighbourhoods on the north of Barcelona belonging to cluster 1, where renting a place to open a restaurant can be cheaper. Futher analysis can be undertaken with the Foursquare app exploring trending venues in different moments of the week (weekends and working days) and of the day (working hours and night).</p>
+
+
+
+
+</body>
+
+</html>
